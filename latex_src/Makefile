@@ -27,6 +27,7 @@ all: $(PDFs)
 ../pdf/%.pdf: %.tex $(TEX_SOURCES)
 	pdflatex $(LATEXFLAGS) $<
 	pdflatex $(LATEXFLAGS) $<
+	pdflatex $(LATEXFLAGS) $<
 
 clean:
 	rm -f ../pdf/commedia-{a4,a5}{,-hr}.{aux,log,out,toc}
