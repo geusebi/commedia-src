@@ -1,6 +1,10 @@
-# Commedia di Dante Alighieri
+# Commedia - Dante Alighieri
 
-Sorgenti latex per produrre il libro Commedia
+Latex sources to build the book "Commedia".
 
-## PDF
-![Commedia - Dante Alighieri](pdf/commedia.pdf "Commedia - Dante Alighieri")
+## Book
+[pdf_download]: https://gitlab.com/geusebi/commedia/raw/master/pdf/commedia.pdf?inline=false "Commedia - Dante Alighieri"
+[pdf_view]: https://gitlab.com/geusebi/commedia/raw/master/pdf/commedia.pdf?inline=false "Commedia - Dante Alighieri"
+
+![Download][pdf_download] Commedia as PDF or ![open][pdf_view] in browser.
+
