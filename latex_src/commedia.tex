@@ -1,0 +1,58 @@
+\documentclass[oneside,\papersize]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[pass]{geometry}
+\usepackage{verse}
+\usepackage{tocloft}
+\ifdefined\withhyperref
+    \usepackage{hyperref}
+	\hypersetup{
+		colorlinks,
+		linkcolor=black,
+	}
+\fi
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\fancyhf{}
+\rhead{\fancyplain{}{\rightmark }} 
+\chead{\fancyplain{}{\leftmark }} 
+\cfoot{\fancyplain{}{\thepage}}
+
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
+
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }\clearpage}
+\makeatother
+
+\renewcommand\thechapter{}
+\renewcommand\thesection{}
+
+\title{\huge\textbf{Commedia}}
+\date{}
+\author{\textbf{Dante Alighieri}}
+
+\begin{document}
+
+\pagestyle{plain}
+\maketitle
+\tableofcontents
+\clearpage
+
+\pagestyle{fancy}
+
+\input{inferno.tex}
+\input{purgatorio.tex}
+\input{paradiso.tex}
+
+\end{document}
