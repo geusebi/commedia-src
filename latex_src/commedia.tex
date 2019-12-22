@@ -22,9 +22,6 @@
 \chead{\fancyplain{}{\leftmark }} 
 \cfoot{\fancyplain{}{\thepage}}
 
-\usepackage{titlesec}
-\newcommand{\sectionbreak}{\clearpage}
-
 \makeatletter
 \def\@makechapterhead#1{%
   \vspace*{50\p@}%
@@ -33,6 +30,12 @@
     \Huge \bfseries #1\par\nobreak
     \vskip 40\p@
   }\clearpage}
+\renewcommand\section{%
+	\clearpage%
+	\@startsection {section}{1}{\z@}%
+	{-3.5ex \@plus -1ex \@minus -.2ex}%
+	{2.3ex \@plus.2ex}%
+	{\normalfont\Large\bfseries}}
 \makeatother
 
 \renewcommand\thechapter{}
