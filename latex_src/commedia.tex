@@ -5,41 +5,18 @@
 \usepackage[pass]{geometry}
 \usepackage{verse}
 \usepackage{tocloft}
+\usepackage{fancyhdr}
 \ifdefined\withhyperref
     \usepackage{hyperref}
-	\hypersetup{
-		colorlinks,
-		linkcolor=black,
-	}
 \fi
-\usepackage{fancyhdr}
-\pagestyle{fancy}
 
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{#1}}
-\fancyhf{}
-\rhead{\fancyplain{}{\rightmark }} 
-\chead{\fancyplain{}{\leftmark }} 
-\cfoot{\fancyplain{}{\thepage}}
-
-\makeatletter
-\def\@makechapterhead#1{%
-  \vspace*{50\p@}%
-  {\parindent \z@ \raggedright \normalfont
-    \interlinepenalty\@M
-    \Huge \bfseries #1\par\nobreak
-    \vskip 40\p@
-  }\clearpage}
-\renewcommand\section{%
-	\clearpage%
-	\@startsection {section}{1}{\z@}%
-	{-3.5ex \@plus -1ex \@minus -.2ex}%
-	{2.3ex \@plus.2ex}%
-	{\normalfont\Large\bfseries}}
-\makeatother
-
-\renewcommand\thechapter{}
-\renewcommand\thesection{}
+\pdfinfo{
+	/Title  (Commedia)
+	/Author (Dante Alighieri)
+	/Subject (Viaggio attraverso i regni dell'oltretomba)
+	/Keywords (Commedia;Comedìa;Divina commedia;Inferno;Purgatorio;Paradiso)
+	/CreationDate (D:13040101000000)
+}
 
 \title{\huge\textbf{Commedia}}
 \date{}
