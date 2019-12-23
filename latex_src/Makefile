@@ -11,7 +11,8 @@ TEX_SOURCES=\
 	purgatorio.tex \
 	$(wildcard purgatorio/*.tex) \
 	paradiso.tex \
-	$(wildcard paradiso/*.tex)
+	$(wildcard paradiso/*.tex) \
+	setup.tex
 
 PDFs=\
 	../pdf/commedia-a4.pdf \
