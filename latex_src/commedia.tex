@@ -8,17 +8,22 @@
 \usepackage{fancyhdr}
 \ifdefined\withhyperref
     \usepackage{hyperref}
+	\hypersetup{pdftitle={Commedia},%
+				pdfauthor={Dante Alighieri},%
+				pdfsubject={Viaggio attraverso i regni dell'oltretomba},%
+				pdfkeywords={Commedia, Comedìa, Divina commedia, Inferno, Purgatorio, Paradiso}%
+	}
 \fi
-
-\input{setup.tex}
 
 \pdfinfo{
 	/Title  (Commedia)
 	/Author (Dante Alighieri)
 	/Subject (Viaggio attraverso i regni dell'oltretomba)
-	/Keywords (Commedia;Comedìa;Divina commedia;Inferno;Purgatorio;Paradiso)
+	/Keywords (Commedia, Comedìa, Divina commedia, Inferno, Purgatorio, Paradiso)
 	/CreationDate (D:13040101000000)
 }
+
+\input{setup.tex}
 
 \title{\huge\textbf{Commedia}}
 \date{}
