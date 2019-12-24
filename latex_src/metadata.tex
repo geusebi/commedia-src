@@ -1,0 +1,24 @@
+\def\metatitle{Commedia}
+\def\metaauthor{Dante Alighieri}
+\def\metasubject{Viaggio attraverso i regni dell'oltretomba}
+\def\metakeywords{Commedia, Comedìa, Divina commedia, Inferno, Purgatorio, Paradiso}
+\def\metadate{D:13040101000000}
+
+\ifdefined\withhyperref
+	\hypersetup{pdftitle={\metatitle},%
+				pdfauthor={\metaauthor},%
+				pdfsubject={\metasubject},%
+				pdfkeywords={\metakeywords}%
+	}
+\else
+	\pdfinfo{
+		/Title  (\metatitle)
+		/Author (\metaauthor)
+		/Subject (\metasubject)
+		/Keywords (\metakeywords)
+	}
+\fi
+
+\pdfinfo{
+	/CreationDate (\metadate)
+}
