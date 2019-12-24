@@ -7,12 +7,10 @@ LATEXFLAGS=\
 TEX_SOURCES=\
 	commedia.tex \
 	inferno.tex \
-	$(wildcard inferno/*.tex) \
 	purgatorio.tex \
-	$(wildcard purgatorio/*.tex) \
 	paradiso.tex \
-	$(wildcard paradiso/*.tex) \
-	setup.tex
+	setup.tex \
+	metadata.tex
 
 PDFs=\
 	../book/commedia-a4.pdf \
@@ -33,6 +31,7 @@ all: $(PDFs)
 $(TEX_SOURCES): ../script/to_latex.py ../commedia.raw.text
 	mkdir -p {inferno,purgatorio,paradiso}
 	python3 ../script/to_latex.py ../commedia.raw.text .
+	touch $(TEX_SOURCES)
 
 clean-build:
 	rm -f ../book/commedia-{a4,a5}{,-hr}.{aux,log,out,toc}
