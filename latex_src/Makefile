@@ -40,4 +40,4 @@ clean:
 	rm -rf {inferno,purgatorio,paradiso}
 	rm -f {inferno.tex,purgatorio.tex,paradiso.tex}
 	rm -f ../pdf/commedia-{a4,a5}{,-hr}.{aux,log,out,toc}
-	rm -f $(PDFS)
+	rm -f $(PDFs)
