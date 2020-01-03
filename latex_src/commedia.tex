@@ -1,18 +1,17 @@
-\documentclass[oneside,\papersize]{book}
+\documentclass[oneside]{book}
+
+\input{parsejobname.tex}
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
-\usepackage[pass]{geometry}
+\usepackage[\papersize]{geometry}
 \usepackage{verse}
 \usepackage{tocloft}
 \usepackage{fancyhdr}
-\ifhr
-    \usepackage{hyperref}
-\fi
 
 \input{setup.tex}
 \input{metadata.tex}
-
 
 \title{\Huge\bfseries\scshape\metatitle}
 \author{\Large\bfseries\scshape\metaauthor}

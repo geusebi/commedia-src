@@ -9,16 +9,17 @@ TEX_SOURCES=\
 	inferno.tex \
 	purgatorio.tex \
 	paradiso.tex \
+	parsejobname.tex \
 	setup.tex \
 	metadata.tex
 
 PDFs=\
 	../book/commedia-a4.pdf \
 	../book/commedia-a4-hr.pdf \
-	../book/commedia-a5.pdf \
-	../book/commedia-a5-hr.pdf \
 	../book/commedia-a4-num.pdf \
 	../book/commedia-a4-hr-num.pdf \
+	../book/commedia-a5.pdf \
+	../book/commedia-a5-hr.pdf \
 	../book/commedia-a5-num.pdf \
 	../book/commedia-a5-hr-num.pdf
 
@@ -27,10 +28,10 @@ PDFs=\
 all: $(PDFs)
 	
 
-../book/%.pdf: %.tex $(TEX_SOURCES)
-	pdflatex $(LATEXFLAGS) $<
-	pdflatex $(LATEXFLAGS) $<
-	pdflatex $(LATEXFLAGS) $<
+../book/%.pdf: $(TEX_SOURCES)
+	pdflatex -jobname $(patsubst ../book/%.pdf,%,$@) $(LATEXFLAGS) commedia.tex
+	pdflatex -jobname $(patsubst ../book/%.pdf,%,$@) $(LATEXFLAGS) commedia.tex
+	pdflatex -jobname $(patsubst ../book/%.pdf,%,$@) $(LATEXFLAGS) commedia.tex
 
 $(TEX_SOURCES): ../script/to_latex.py ../commedia.raw.text
 	mkdir -p {inferno,purgatorio,paradiso}

@@ -1,0 +1,30 @@
+\usepackage{xstring}
+
+\newif\ifnumbering
+\newif\ifhyperref
+\newif\ifAfour
+\newif\ifAfive
+
+
+\IfSubStr*{\jobname}{-a4}{\Afourtrue}{\Afourfalse}
+
+\IfSubStr*{\jobname}{-a5}{\Afivetrue}{\Afivefalse}
+
+\IfSubStr*{\jobname}{-hr}{\hyperreftrue}{\hyperreffalse}
+
+\IfSubStr*{\jobname}{-num}{\numberingtrue}{\numberingfalse}
+
+
+\ifAfour
+\def\papersize{a4paper}
+\fi
+
+\ifAfive
+\def\papersize{a5paper}
+\fi
+
+% default to A4 paper
+\ifdefined\papersize\else
+	\Afourtrue
+	\def\papersize{a4paper}
+\fi
