@@ -29,6 +29,7 @@ all: $(PDFs)
 	
 
 ../book/%.pdf: $(TEX_SOURCES)
+	mkdir -p ../book
 	pdflatex -jobname $(patsubst ../book/%.pdf,%,$@) $(LATEXFLAGS) commedia.tex
 	pdflatex -jobname $(patsubst ../book/%.pdf,%,$@) $(LATEXFLAGS) commedia.tex
 	pdflatex -jobname $(patsubst ../book/%.pdf,%,$@) $(LATEXFLAGS) commedia.tex
