@@ -1,4 +1,4 @@
-     sys import argv
+from sys import argv
 
 text = open(argv[1])
 
