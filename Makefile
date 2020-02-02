@@ -27,3 +27,4 @@ clean-build:
 clean:
 	(cd latex_src; make clean)
 	rm -f book/commedia.txt
+	rm -f book/commedia.html
