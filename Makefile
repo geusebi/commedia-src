@@ -13,7 +13,7 @@ book/commedia.txt: script/to_text.py commedia.raw.text
 HTML: book/commedia.html
 	
 
-book/commedia.html: script/to_html.py commedia.raw.text
+book/commedia.html: script/to_html.py html_templates/poema.html commedia.raw.text
 	mkdir -p book
 	python3 script/to_html.py commedia.raw.text > book/commedia.html
 
