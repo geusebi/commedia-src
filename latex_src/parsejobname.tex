@@ -4,6 +4,7 @@
 \newif\ifhyperref
 \newif\ifAfour
 \newif\ifAfive
+\newif\iftwocol
 
 
 \IfSubStr*{\jobname}{-a4}{\Afourtrue}{\Afourfalse}
@@ -14,6 +15,8 @@
 
 \IfSubStr*{\jobname}{-num}{\numberingtrue}{\numberingfalse}
 
+\IfSubStr*{\jobname}{-twocol}{\twocoltrue}{\twocolfalse}
+
 
 \ifAfour
 \def\papersize{a4paper}
@@ -21,6 +24,12 @@
 
 \ifAfive
 \def\papersize{a5paper}
+\fi
+
+\iftwocol
+\def\margins{left=.75in,right=.75in}
+\else
+\def\margins{}
 \fi
 
 % default to A4 paper
